@@ -11,24 +11,25 @@ function App() {
     e.preventDefault(); //Zapobiega odświeżeniu strony po kliknięciu
 
     //Wyświetlanie danych formularza w konsoli
-    console.log()
+    console.log(`Tytuł: ${tytul}, Rodzaj: ${rodzaj}`);
+  };
+
   return (
-    <div className="App">
-      <form>
-        <div class="mb-3">
-          <label for="film" class="form-label">Tytuł filmu</label>
-          <input type="text" class="form-control" id="film" />
-          </div>
-         <select name="Rodzaj">
+    <div className="container">
+      <h1>Dodaj film</h1>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="tytul">Tytuł filmu:</label>
+        <input type="text" className="form-control" id="film" />
+        <select name="Rodzaj">
           <option value="1"> Komedia</option>
           <option value="2"> Obyczajowy </option>
           <option value="3"> Sensacyjny </option>
           <option value="4"> Horror </option>
          </select>
-         <button type="button">Dodaj</button>
-    </form>
+         <button type="submit">Dodaj</button>
+      </form>
     </div>
-     );
-}
+    )
 
+  }
 export default App;
