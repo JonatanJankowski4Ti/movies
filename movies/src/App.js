@@ -15,7 +15,7 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <div className="container"> style={{ padding: "20px" }}
       <h1>Dodaj film</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="tytul">Tytuł filmu:</label>
